@@ -19,7 +19,7 @@ steps:
 
     branch=$(Build.SourceBranchName)
     echo "Branch reported by Azure: $branch"
-    if [ "$branch" == "main" ]; then
+    if [ "$branch" /= "main" ]; then
         exit 0
     else
         echo "Bumping main"
